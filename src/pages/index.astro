@@ -1,0 +1,183 @@
+---
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice2Task — Habla. Captura. Organiza.</title>
+  <meta name="description" content="Convierte tus notas de voz en tareas estructuradas con inteligencia artificial." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/global.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <img src="/favicon.ico" alt="" class="nav-favicon" />
+        <span class="nav-brand">Voice<span class="accent">2</span>Task</span>
+      </div>
+      <div class="nav-center">
+        <a href="#como-funciona" class="nav-link" id="navHow">Cómo funciona</a>
+        <a href="#descarga" class="nav-link nav-link-cta" id="navDownload">Descargar APK</a>
+      </div>
+      <div class="nav-right">
+        <button class="lang-opt active" id="btnEs" onclick="setLang('es')">ES</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-opt" id="btnEn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-inner">
+      <img src="/logo.png" alt="Voice2Task" class="hero-logo" />
+      <h1 id="heroTitle">Habla.<br/><span class="gradient-text">Tu tarea ya está creada.</span></h1>
+      <p class="hero-sub" id="heroSub">Graba una nota de voz. La IA transcribe, entiende y organiza por ti. Sin escribir una sola palabra.</p>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="how" id="como-funciona">
+    <div class="container">
+      <h2 id="howTitle">De tu voz a tu lista en segundos</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-icon">🎤</div>
+          <h3 id="step1Title">Habla</h3>
+          <p id="step1Desc">Pulsa grabar y di lo que necesitas hacer. Sin formato, como le hablarías a alguien.</p>
+        </div>
+        <div class="step-arrow-wrap">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" stroke="url(#ga)"/>
+            <polyline points="12 5 19 12 12 19" stroke="url(#ga)"/>
+            <defs><linearGradient id="ga" x1="0" y1="0" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
+          </svg>
+        </div>
+        <div class="step">
+          <div class="step-icon">📝</div>
+          <h3 id="step2Title">Whisper transcribe</h3>
+          <p id="step2Desc">El audio se procesa con Whisper de OpenAI. Tu voz se convierte en texto con alta precisión.</p>
+        </div>
+        <div class="step-arrow-wrap">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" stroke="url(#gb)"/>
+            <polyline points="12 5 19 12 12 19" stroke="url(#gb)"/>
+            <defs><linearGradient id="gb" x1="0" y1="0" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
+          </svg>
+        </div>
+        <div class="step">
+          <div class="step-icon">🤖</div>
+          <h3 id="step3Title">La IA estructura</h3>
+          <p id="step3Desc">Groq extrae título, descripción, fecha y prioridad. Te muestra una propuesta antes de guardar.</p>
+        </div>
+        <div class="step-arrow-wrap">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12" stroke="url(#gc)"/>
+            <polyline points="12 5 19 12 12 19" stroke="url(#gc)"/>
+            <defs><linearGradient id="gc" x1="0" y1="0" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
+          </svg>
+        </div>
+        <div class="step">
+          <div class="step-icon">✅</div>
+          <h3 id="step4Title">Tú confirmas</h3>
+          <p id="step4Desc">Revisa la tarea propuesta, ajusta si quieres y guarda. La IA propone, tú decides.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESCARGA -->
+  <section class="download" id="descarga">
+    <div class="container">
+      <div class="download-card">
+        <div class="download-glow"></div>
+        <h2 id="dlTitle">Descarga Voice2Task</h2>
+        <div class="api-note">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <span id="apiNote">Requiere tu propia <a href="https://console.groq.com/keys" target="_blank">Groq API key</a> (gratuita) · La configuras dentro de la app</span>
+        </div>
+        <a href="#" class="btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span id="dlBtn">Descargar APK · Android</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p class="footer-copy">© Voice2Task 2026</p>
+    </div>
+  </footer>
+
+<script is:inline>
+  var lang = 'es';
+  var translations = {
+    es: {
+      navHow: 'Cómo funciona',
+      navDownload: 'Descargar APK',
+      heroTitle: 'Habla.<br/><span class="gradient-text">Tu tarea ya está creada.</span>',
+      heroSub: 'Graba una nota de voz. La IA transcribe, entiende y organiza por ti. Sin escribir una sola palabra.',
+      howLabel: 'El proceso',
+      howTitle: 'De tu voz a tu lista en segundos',
+      step1Title: 'Habla', step1Desc: 'Pulsa grabar y di lo que necesitas hacer. Sin formato, como le hablarías a alguien.',
+      step2Title: 'Whisper transcribe', step2Desc: 'El audio se procesa con Whisper de OpenAI. Tu voz se convierte en texto con alta precisión.',
+      step3Title: 'La IA estructura', step3Desc: 'Groq extrae título, descripción, fecha y prioridad. Te muestra una propuesta antes de guardar.',
+      step4Title: 'Tú confirmas', step4Desc: 'Revisa la tarea propuesta, ajusta si quieres y guarda. La IA propone, tú decides.',
+      dlTitle: 'Descarga Voice2Task',
+      apiNote: 'Requiere tu propia <a href="https://console.groq.com/keys" target="_blank">Groq API key</a> (gratuita) · La configuras dentro de la app',
+      dlBtn: 'Descargar APK · Android'
+    },
+    en: {
+      navHow: 'How it works',
+      navDownload: 'Download APK',
+      heroTitle: 'Speak.<br/><span class="gradient-text">Your task is already done.</span>',
+      heroSub: 'Record a voice note. AI transcribes, understands and organises for you. Without typing a single word.',
+      howLabel: 'The process',
+      howTitle: 'From your voice to your list in seconds',
+      step1Title: 'Speak', step1Desc: 'Hit record and say what you need to do. No format, just talk naturally.',
+      step2Title: 'Whisper transcribes', step2Desc: 'Audio is processed with OpenAI Whisper. Your voice becomes text with high accuracy.',
+      step3Title: 'AI structures', step3Desc: 'Groq extracts title, description, date and priority. Shows a proposal before saving.',
+      step4Title: 'You confirm', step4Desc: 'Review the proposed task, adjust if needed and save. AI proposes, you decide.',
+      dlTitle: 'Download Voice2Task',
+      apiNote: 'Requires your own <a href="https://console.groq.com/keys" target="_blank">Groq API key</a> (free) · Set it up inside the app',
+      dlBtn: 'Download APK · Android'
+    }
+  };
+
+  function setLang(newLang) {
+    lang = newLang;
+    document.documentElement.lang = lang;
+    document.getElementById('btnEs').classList.toggle('active', lang === 'es');
+    document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+    var d = translations[lang];
+    var ids = Object.keys(d);
+    for (var i = 0; i < ids.length; i++) {
+      var el = document.getElementById(ids[i]);
+      if (el) el.innerHTML = d[ids[i]];
+    }
+    var gt = document.querySelector('.gradient-text');
+    if (gt) {
+      gt.style.background = 'linear-gradient(135deg, #7c3aed, #3b82f6)';
+      gt.style.webkitBackgroundClip = 'text';
+      gt.style.webkitTextFillColor = 'transparent';
+      gt.style.backgroundClip = 'text';
+    }
+  }
+</script>
+
+</body>
+</html>
