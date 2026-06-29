@@ -1,43 +1,123 @@
-# Astro Starter Kit: Minimal
+# voice2task-web
 
-```sh
-npm create astro@latest -- --template minimal
+> Landing page de Voice2Task | Voice2Task landing page
+
+---
+
+## Español
+
+Landing page pública de **Voice2Task**, la app Android que convierte notas de voz en tareas estructuradas con IA. Incluye selector de idioma ES/EN, descripción del flujo de la app y enlace de descarga del APK.
+
+---
+
+### ✨ Funcionalidades
+
+- 🌍 **Bilingüe** — selector ES/EN con cambio dinámico sin recarga de página
+- 📱 **Descarga directa** — enlace al APK de la app Android
+- ⚙️ **Cómo funciona** — flujo visual de 4 pasos: grabar → transcribir → estructurar → confirmar
+- ⚡ **Estática** — sin backend, despliegue instantáneo en cualquier CDN
+
+---
+
+### 🛠️ Stack tecnológico
+
+| Capa | Tecnología |
+|------|-----------|
+| Framework | Astro |
+| Estilos | CSS puro (variables + custom properties) |
+| Tipografía | Outfit + Inter (Google Fonts) |
+| Despliegue | Vercel |
+
+---
+
+### 📁 Estructura del proyecto
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
+voice2task-web/
 ├── public/
+│   ├── favicon.ico       # Favicon de la app
+│   ├── logo.png          # Logo principal
+│   └── global.css        # Estilos globales
 ├── src/
 │   └── pages/
-│       └── index.astro
+│       └── index.astro   # Página principal (HTML + JS i18n inline)
+├── astro.config.mjs
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### 🚀 Instalación
 
-Any static assets, like images, can be placed in the `public/` directory.
+```bash
+git clone https://github.com/ArocaDev/voice2task-web.git
+cd voice2task-web
 
-## 🧞 Commands
+npm install
+npm run dev
+```
 
-All commands are run from the root of the project, from a terminal:
+Web disponible en `http://localhost:4321`
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+### 🔗 Repositorios del proyecto
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Componente | Repositorio |
+|---|---|
+| Backend API REST | [voice2task](https://github.com/ArocaDev/voice2task) |
+| Landing web (este repo) | [voice2task-web](https://github.com/ArocaDev/voice2task-web) |
+| App Android | [voice2task-android](https://github.com/ArocaDev/voice2task-android) |
+
+---
+
+## 🌐 English
+
+Public landing page for **Voice2Task**, the Android app that converts voice notes into structured tasks using AI. Includes an ES/EN language selector, app flow description and APK download link.
+
+---
+
+### ✨ Features
+
+- 🌍 **Bilingual** — ES/EN selector with dynamic switching without page reload
+- 📱 **Direct download** — link to the Android APK
+- ⚙️ **How it works** — 4-step visual flow: record → transcribe → structure → confirm
+- ⚡ **Static** — no backend, instant deployment on any CDN
+
+---
+
+### 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Astro |
+| Styles | Pure CSS (variables + custom properties) |
+| Typography | Outfit + Inter (Google Fonts) |
+| Deployment | Vercel |
+
+---
+
+### 🚀 Installation
+
+```bash
+git clone https://github.com/ArocaDev/voice2task-web.git
+cd voice2task-web
+
+npm install
+npm run dev
+```
+
+Available at `http://localhost:4321`
+
+---
+
+## 👤 Autor / Author
+
+**Alejandro Rodríguez Calabuig** — [github.com/ArocaDev](https://github.com/ArocaDev) · [LinkedIn](https://linkedin.com/in/alejandro-rodriguez-calabuig-a871a1230)
+
+---
+
+## 📄 Licencia / License
+
+Proyecto personal en desarrollo.  
+Personal project under development.
