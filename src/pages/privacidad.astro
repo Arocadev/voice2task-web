@@ -1,0 +1,106 @@
+---
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacidad — Voice2Task</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <img src="/favicon.ico" alt="" class="nav-favicon" />
+        <span class="nav-brand">Voice<span class="accent">2</span>Task</span>
+      </div>
+      <div class="nav-center">
+        <a href="/" class="nav-link" id="navHome">Inicio</a>
+      </div>
+      <div class="nav-right">
+        <button class="lang-opt active" id="btnEs" onclick="setLang('es')">ES</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-opt" id="btnEn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </nav>
+  <section class="legal">
+    <div class="container">
+      <h1 id="title">Política de privacidad</h1>
+      <p class="legal-updated" id="updated">Última actualización: junio de 2026</p>
+      <p id="intro">Voice2Task es un proyecto personal desarrollado por Alejandro Rodríguez como parte de su portfolio. Esta página describe, de forma orientativa, cómo se tratan los datos dentro de la app.</p>
+      <h2 id="h1">Qué datos se guardan</h2>
+      <p id="p1">Al registrarte se guarda tu correo electrónico y contraseña (cifrada). Las tareas que crees, así como las transcripciones de tus notas de voz, se almacenan asociadas a tu cuenta para que puedas consultarlas.</p>
+      <h2 id="h2">Procesamiento de audio</h2>
+      <p id="p2">Los audios se envían a servicios de terceros (Whisper y Groq) únicamente para transcribirlos y estructurarlos en tareas. No se comparten con nadie más ni se utilizan con fines publicitarios.</p>
+      <h2 id="h3">Tus derechos</h2>
+      <p id="p3">Puedes solicitar el acceso, la rectificación o la eliminación de tu cuenta y tus datos en cualquier momento contactando con el desarrollador.</p>
+      <h2 id="h4">Carácter del proyecto</h2>
+      <p id="p4">Voice2Task es un proyecto personal sin ánimo de lucro, desarrollado con fines de aprendizaje y como pieza de portfolio. No se garantiza disponibilidad continua, copias de seguridad ni soporte, y el servicio puede modificarse, suspenderse o eliminarse en cualquier momento sin previo aviso.</p>
+      <h2 id="h5">Cambios en esta política</h2>
+      <p id="p5">Esta política puede actualizarse en cualquier momento. El uso continuado de la app después de un cambio implica la aceptación de la nueva versión.</p>
+    </div>
+  </section>
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-copy">© Voice2Task 2026 · Hecho por Alejandro Rodríguez</p>
+      <div class="footer-links">
+        <a href="/privacidad" id="footerPrivacy">Privacidad</a>
+        <a href="/terminos" id="footerTerms">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+<script is:inline>
+  var translations = {
+    es: {
+      navHome: 'Inicio',
+      title: 'Política de privacidad',
+      updated: 'Última actualización: junio de 2026',
+      intro: 'Voice2Task es un proyecto personal desarrollado por Alejandro Rodríguez como parte de su portfolio. Esta página describe, de forma orientativa, cómo se tratan los datos dentro de la app.',
+      h1: 'Qué datos se guardan',
+      p1: 'Al registrarte se guarda tu correo electrónico y contraseña (cifrada). Las tareas que crees, así como las transcripciones de tus notas de voz, se almacenan asociadas a tu cuenta para que puedas consultarlas.',
+      h2: 'Procesamiento de audio',
+      p2: 'Los audios se envían a servicios de terceros (Whisper y Groq) únicamente para transcribirlos y estructurarlos en tareas. No se comparten con nadie más.',
+      h3: 'Tus derechos',
+      p3: 'Puedes solicitar el acceso, la rectificación o la eliminación de tu cuenta y tus datos en cualquier momento contactando con el desarrollador.',
+      h4: 'Carácter del proyecto',
+      p4: 'Voice2Task es un proyecto personal sin ánimo de lucro, desarrollado con fines de aprendizaje y como pieza de portfolio. No se garantiza disponibilidad continua, copias de seguridad ni soporte, y el servicio puede modificarse, suspenderse o eliminarse en cualquier momento sin previo aviso.',
+      h5: 'Cambios en esta política',
+      p5: 'Esta política puede actualizarse en cualquier momento. El uso continuado de la app después de un cambio implica la aceptación de la nueva versión.',
+      footerPrivacy: 'Privacidad', footerTerms: 'Términos'
+    },
+    en: {
+      navHome: 'Home',
+      title: 'Privacy Policy',
+      updated: 'Last updated: June 2026',
+      intro: 'Voice2Task is a personal project developed by Alejandro Rodríguez as part of his portfolio. This page describes, for informational purposes, how data is handled within the app.',
+      h1: 'What data is stored',
+      p1: 'When you sign up, your email and password (encrypted) are stored. The tasks you create, along with voice note transcriptions, are stored under your account so you can access them later.',
+      h2: 'Audio processing',
+      p2: 'Audio is sent to third-party services (Whisper and Groq) solely to transcribe and structure it into tasks. It is not shared with anyone else.',
+      h3: 'Your rights',
+      p3: 'You can request access, correction, or deletion of your account and data at any time by contacting the developer.',
+      h4: 'Nature of the project',
+      p4: 'Voice2Task is a non-profit personal project, built for learning purposes and as a portfolio piece. Continuous availability, backups, or support are not guaranteed, and the service may be changed, suspended, or discontinued at any time without notice.',
+      h5: 'Changes to this policy',
+      p5: 'This policy may be updated at any time. Continued use of the app after a change implies acceptance of the new version.',
+      footerPrivacy: 'Privacy', footerTerms: 'Terms'
+    }
+  };
+
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.getElementById('btnEs').classList.toggle('active', lang === 'es');
+    document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+    var d = translations[lang];
+    Object.keys(d).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.innerHTML = d[id];
+    });
+  }
+</script>
+</body>
+</html>

@@ -5,13 +5,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Voice2Task — Habla. Captura. Organiza.</title>
-  <meta name="description" content="Convierte tus notas de voz en tareas estructuradas con inteligencia artificial." />
+  <title>Voice2Task — Piensa. Habla. Recuerda.</title>
+  <meta name="description" content="Captura tus ideas al instante por voz y conviértelas en tareas organizadas automáticamente." />
   <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/global.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
 </head>
 <body>
 
@@ -23,10 +23,13 @@
         <span class="nav-brand">Voice<span class="accent">2</span>Task</span>
       </div>
       <div class="nav-center">
+        <a href="#caracteristicas" class="nav-link" id="navFeatures">Características</a>
         <a href="#como-funciona" class="nav-link" id="navHow">Cómo funciona</a>
-        <a href="#descarga" class="nav-link nav-link-cta" id="navDownload">Descargar APK</a>
+        <a href="#faq" class="nav-link" id="navFaq">Preguntas frecuentes</a>
       </div>
       <div class="nav-right">
+        <a href="#descarga" class="nav-link-cta" id="navDownload">Descargar la app</a>
+        <span class="nav-sep"></span>
         <button class="lang-opt active" id="btnEs" onclick="setLang('es')">ES</button>
         <span class="lang-sep">|</span>
         <button class="lang-opt" id="btnEn" onclick="setLang('en')">EN</button>
@@ -38,58 +41,168 @@
   <section class="hero">
     <div class="hero-glow"></div>
     <div class="container hero-inner">
-      <img src="/logo.png" alt="Voice2Task" class="hero-logo" />
-      <h1 id="heroTitle">Habla.<br/><span class="gradient-text">Tu tarea ya está creada.</span></h1>
-      <p class="hero-sub" id="heroSub">Graba una nota de voz. La IA transcribe, entiende y organiza por ti. Sin escribir una sola palabra.</p>
+      <div class="hero-copy">
+        <span class="eyebrow" id="eyebrow">CONVIERTE TU VOZ EN ACCIÓN</span>
+        <h1 id="heroTitle">Piensa.<br/>Habla.<br/><span class="gradient-text">Recuerda.</span></h1>
+        <p class="hero-sub" id="heroSub">Captura tus ideas al instante con la voz y conviértelas en tareas organizadas automáticamente.</p>
+        <div class="hero-actions">
+          <a href="#descarga" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span id="heroDl">Descargar la app</span>
+          </a>
+          <a href="#como-funciona" class="btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+            <span id="heroHow">Ver cómo funciona</span>
+          </a>
+        </div>
+        <div class="hero-available">
+          <span id="heroAvailable">Disponible para</span>
+          <span class="android-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341A1.18 1.18 0 1 1 16.342 14.16a1.18 1.18 0 0 1 1.181 1.181m-9.046 0a1.18 1.18 0 1 1-1.181-1.181 1.18 1.18 0 0 1 1.181 1.181m9.4-6.502 1.823-3.158a.38.38 0 0 0-.658-.38L16.84 8.502a11.4 11.4 0 0 0-9.68 0L5.458 5.301a.38.38 0 1 0-.658.38l1.823 3.158C3.9 10.696 2.1 13.524 1.8 16.86h20.4c-.3-3.336-2.1-6.164-4.823-8.021"/></svg>
+            Android
+          </span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="waveform waveform-left" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="hero-ring">
+          <span class="hero-ring-pulse p1"></span>
+          <span class="hero-ring-pulse p2"></span>
+          <span class="hero-ring-pulse p3"></span>
+          <img src="/logo-mark.png" alt="Voice2Task" class="hero-mark" />
+        </div>
+        <div class="waveform waveform-right" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="caracteristicas">
+    <div class="container">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-head">
+            <div class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3 id="f1Title">Rápido</h3>
+          </div>
+          <p id="f1Desc">Habla y crea tareas en segundos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-head">
+            <div class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.5" fill="currentColor"/></svg>
+            </div>
+            <h3 id="f2Title">Inteligente</h3>
+          </div>
+          <p id="f2Desc">La IA entiende tu mensaje y lo organiza por ti.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-head">
+            <div class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3 id="f3Title">Privado</h3>
+          </div>
+          <p id="f3Desc">Tus datos son tuyos. Siempre seguros.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-head">
+            <div class="feature-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 id="f4Title">Organizado</h3>
+          </div>
+          <p id="f4Desc">Todo en su lugar, siempre que lo necesites.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- COMO FUNCIONA -->
   <section class="how" id="como-funciona">
     <div class="container">
-      <h2 id="howTitle">De tu voz a tu lista en segundos</h2>
+      <h2 id="howTitle">Cómo funciona</h2>
       <div class="steps">
         <div class="step">
-          <div class="step-icon">🎤</div>
+          <span class="step-num">1</span>
+          <div class="step-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </div>
           <h3 id="step1Title">Habla</h3>
-          <p id="step1Desc">Pulsa grabar y di lo que necesitas hacer. Sin formato, como le hablarías a alguien.</p>
+          <p id="step1Desc">Cuenta tu idea, tarea o recordatorio.</p>
         </div>
         <div class="step-arrow-wrap">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12" stroke="url(#ga)"/>
-            <polyline points="12 5 19 12 12 19" stroke="url(#ga)"/>
-            <defs><linearGradient id="ga" x1="0" y1="0" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
-          </svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
         <div class="step">
-          <div class="step-icon">📝</div>
-          <h3 id="step2Title">Whisper transcribe</h3>
-          <p id="step2Desc">El audio se procesa con Whisper de OpenAI. Tu voz se convierte en texto con alta precisión.</p>
+          <span class="step-num">2</span>
+          <div class="step-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" y1="12" x2="2" y2="12"/><line x1="6" y1="8" x2="6" y2="16"/><line x1="10" y1="4" x2="10" y2="20"/><line x1="14" y1="9" x2="14" y2="15"/><line x1="18" y1="6" x2="18" y2="18"/><line x1="22" y1="11" x2="22" y2="13"/></svg>
+          </div>
+          <h3 id="step2Title">Se entiende</h3>
+          <p id="step2Desc">La IA transcribe y entiende lo importante.</p>
         </div>
         <div class="step-arrow-wrap">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12" stroke="url(#gb)"/>
-            <polyline points="12 5 19 12 12 19" stroke="url(#gb)"/>
-            <defs><linearGradient id="gb" x1="0" y1="0" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
-          </svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
         <div class="step">
-          <div class="step-icon">🤖</div>
-          <h3 id="step3Title">La IA estructura</h3>
-          <p id="step3Desc">Groq extrae título, descripción, fecha y prioridad. Te muestra una propuesta antes de guardar.</p>
+          <span class="step-num">3</span>
+          <div class="step-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="4" cy="6" r="1" fill="currentColor"/><circle cx="4" cy="12" r="1" fill="currentColor"/><circle cx="4" cy="18" r="1" fill="currentColor"/><line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/><line x1="9" y1="18" x2="20" y2="18"/></svg>
+          </div>
+          <h3 id="step3Title">Se organiza</h3>
+          <p id="step3Desc">Se convierte en tarea y se añade a la lista correcta.</p>
         </div>
         <div class="step-arrow-wrap">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12" stroke="url(#gc)"/>
-            <polyline points="12 5 19 12 12 19" stroke="url(#gc)"/>
-            <defs><linearGradient id="gc" x1="0" y1="0" x2="24" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs>
-          </svg>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </div>
         <div class="step">
-          <div class="step-icon">✅</div>
-          <h3 id="step4Title">Tú confirmas</h3>
-          <p id="step4Desc">Revisa la tarea propuesta, ajusta si quieres y guarda. La IA propone, tú decides.</p>
+          <span class="step-num">4</span>
+          <div class="step-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3 id="step4Title">Lo tienes listo</h3>
+          <p id="step4Desc">Lo encuentras cuando lo necesitas.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2 id="faqTitle">Preguntas frecuentes</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary id="q1">¿Necesito conexión a internet?</summary>
+          <p id="a1">Sí, la transcripción y el análisis con IA se procesan en el servidor, así que hace falta conexión.</p>
+        </details>
+        <details class="faq-item">
+          <summary id="q2">¿Tengo que pagar algo?</summary>
+          <p id="a2">La app es gratuita. Solo necesitas tu propia clave de Groq, también gratuita, para que la IA funcione.</p>
+        </details>
+        <details class="faq-item">
+          <summary id="q3">¿Dónde se guardan mis datos?</summary>
+          <p id="a3">Tus tareas y audios se guardan en tu propia cuenta, accesible solo con tu usuario y contraseña.</p>
+        </details>
+        <details class="faq-item">
+          <summary id="q5">¿Es segura mi cuenta?</summary>
+          <p id="a5">Sí. Tu contraseña se guarda cifrada y nunca en texto plano, y cada sesión se autentica con un token que solo tú puedes usar. Nadie más puede ver tus tareas ni tus notas de voz.</p>
+        </details>
+        <details class="faq-item">
+          <summary id="q4">¿Está disponible para iOS?</summary>
+          <p id="a4">Por ahora Voice2Task solo está disponible para Android.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -101,7 +214,7 @@
         <div class="download-glow"></div>
         <h2 id="dlTitle">Descarga Voice2Task</h2>
         <div class="api-note">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           <span id="apiNote">Requiere tu propia <a href="https://console.groq.com/keys" target="_blank">Groq API key</a> (gratuita) · La configuras dentro de la app</span>
         </div>
         <a href="#" class="btn-primary">
@@ -112,14 +225,39 @@
           </svg>
           <span id="dlBtn">Descargar APK · Android</span>
         </a>
+        <div class="download-integrations">
+          <span class="integrations-label" id="intLabel">Se integra con</span>
+          <div class="integrations-icons">
+            <span class="integration-item">
+              <svg width="18" height="18" viewBox="0 0 240 240"><circle cx="120" cy="120" r="120" fill="#229ED9"/><path fill="#fff" d="M52 122l125-48c6-2 11 1 9 10l-21 100c-2 8-7 10-14 6l-39-29-19 18c-2 2-4 4-8 4l3-40 73-66c3-3-1-5-5-2l-90 57-39-12c-8-3-8-9 2-12z"/></svg>
+              <span>Telegram</span>
+            </span>
+            <span class="integration-item">
+              <svg width="18" height="18" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#0052CC"/><rect x="3.2" y="3.2" width="7" height="17.6" rx="1.6" fill="#fff"/><rect x="13.8" y="3.2" width="7" height="10.4" rx="1.6" fill="#fff"/></svg>
+              <span>Trello</span>
+            </span>
+            <span class="integration-item">
+              <svg width="18" height="18" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="19" rx="2.5" fill="#fff"/><rect x="2" y="3" width="20" height="5" rx="2.5" fill="#1A73E8"/><rect x="2" y="6" width="20" height="2" fill="#1A73E8"/><text x="12" y="17.5" font-size="9" font-weight="700" text-anchor="middle" fill="#1A73E8" font-family="Arial">31</text></svg>
+              <span>Google Calendar</span>
+            </span>
+            <span class="integration-item">
+              <svg width="18" height="18" viewBox="0 0 100 100"><rect width="100" height="100" rx="18" fill="#fff" stroke="#000" stroke-width="2"/><path fill="#000" d="M27 24c-2-2-2-3 1-3l44-3c4 0 6 2 4 4l-7 5v53l8 5c2 2 1 4-2 5l-30 3c-2 0-3-1-3-3l1-4-37 3c-3 0-5-2-5-4V35c0-2 1-4 3-5l23-2-0-4zm6 8l31-2 5-3-30 2zM30 38v50l38-2V40z"/></svg>
+              <span>Notion</span>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="container">
-      <p class="footer-copy">© Voice2Task 2026</p>
+    <div class="container footer-inner">
+      <p class="footer-copy">© Voice2Task 2026 · Hecho por Alejandro Rodríguez</p>
+      <div class="footer-links">
+        <a href="/privacidad" id="footerPrivacy">Privacidad</a>
+        <a href="/terminos" id="footerTerms">Términos</a>
+      </div>
     </div>
   </footer>
 
@@ -128,33 +266,67 @@
   var translations = {
     es: {
       navHow: 'Cómo funciona',
-      navDownload: 'Descargar APK',
-      heroTitle: 'Habla.<br/><span class="gradient-text">Tu tarea ya está creada.</span>',
-      heroSub: 'Graba una nota de voz. La IA transcribe, entiende y organiza por ti. Sin escribir una sola palabra.',
-      howLabel: 'El proceso',
-      howTitle: 'De tu voz a tu lista en segundos',
-      step1Title: 'Habla', step1Desc: 'Pulsa grabar y di lo que necesitas hacer. Sin formato, como le hablarías a alguien.',
-      step2Title: 'Whisper transcribe', step2Desc: 'El audio se procesa con Whisper de OpenAI. Tu voz se convierte en texto con alta precisión.',
-      step3Title: 'La IA estructura', step3Desc: 'Groq extrae título, descripción, fecha y prioridad. Te muestra una propuesta antes de guardar.',
-      step4Title: 'Tú confirmas', step4Desc: 'Revisa la tarea propuesta, ajusta si quieres y guarda. La IA propone, tú decides.',
+      navFeatures: 'Características',
+      navFaq: 'Preguntas frecuentes',
+      navDownload: 'Descargar la app',
+      eyebrow: 'CONVIERTE TU VOZ EN ACCIÓN',
+      heroTitle: 'Piensa.<br/>Habla.<br/><span class="gradient-text">Recuerda.</span>',
+      heroSub: 'Captura tus ideas al instante con la voz y conviértelas en tareas organizadas automáticamente.',
+      heroDl: 'Descargar la app',
+      heroHow: 'Ver cómo funciona',
+      f1Title: 'Rápido', f1Desc: 'Habla y crea tareas en segundos.',
+      f2Title: 'Inteligente', f2Desc: 'La IA entiende tu mensaje y lo organiza por ti.',
+      f3Title: 'Privado', f3Desc: 'Tus datos son tuyos. Siempre seguros.',
+      f4Title: 'Organizado', f4Desc: 'Todo en su lugar, siempre que lo necesites.',
+      heroAvailable: 'Disponible para',
+      intLabel: 'Se integra con',
+      howTitle: 'Cómo funciona',
+      step1Title: 'Habla', step1Desc: 'Cuenta tu idea, tarea o recordatorio.',
+      step2Title: 'Se entiende', step2Desc: 'La IA transcribe y entiende lo importante.',
+      step3Title: 'Se organiza', step3Desc: 'Se convierte en tarea y se añade a la lista correcta.',
+      step4Title: 'Lo tienes listo', step4Desc: 'Lo encuentras cuando lo necesitas.',
       dlTitle: 'Descarga Voice2Task',
       apiNote: 'Requiere tu propia <a href="https://console.groq.com/keys" target="_blank">Groq API key</a> (gratuita) · La configuras dentro de la app',
-      dlBtn: 'Descargar APK · Android'
+      dlBtn: 'Descargar APK · Android',
+      faqTitle: 'Preguntas frecuentes',
+      q1: '¿Necesito conexión a internet?', a1: 'Sí, la transcripción y el análisis con IA se procesan en el servidor, así que hace falta conexión.',
+      q2: '¿Tengo que pagar algo?', a2: 'La app es gratuita. Solo necesitas tu propia clave de Groq, también gratuita, para que la IA funcione.',
+      q3: '¿Dónde se guardan mis datos?', a3: 'Tus tareas y audios se guardan en tu propia cuenta, accesible solo con tu usuario y contraseña.',
+      q5: '¿Es segura mi cuenta?', a5: 'Sí. Tu contraseña se guarda cifrada y nunca en texto plano, y cada sesión se autentica con un token que solo tú puedes usar. Nadie más puede ver tus tareas ni tus notas de voz.',
+      q4: '¿Está disponible para iOS?', a4: 'Por ahora Voice2Task solo está disponible para Android.',
+      footerPrivacy: 'Privacidad', footerTerms: 'Términos'
     },
     en: {
       navHow: 'How it works',
-      navDownload: 'Download APK',
-      heroTitle: 'Speak.<br/><span class="gradient-text">Your task is already done.</span>',
-      heroSub: 'Record a voice note. AI transcribes, understands and organises for you. Without typing a single word.',
-      howLabel: 'The process',
-      howTitle: 'From your voice to your list in seconds',
-      step1Title: 'Speak', step1Desc: 'Hit record and say what you need to do. No format, just talk naturally.',
-      step2Title: 'Whisper transcribes', step2Desc: 'Audio is processed with OpenAI Whisper. Your voice becomes text with high accuracy.',
-      step3Title: 'AI structures', step3Desc: 'Groq extracts title, description, date and priority. Shows a proposal before saving.',
-      step4Title: 'You confirm', step4Desc: 'Review the proposed task, adjust if needed and save. AI proposes, you decide.',
+      navFeatures: 'Features',
+      navFaq: 'FAQ',
+      navDownload: 'Download the app',
+      eyebrow: 'TURN YOUR VOICE INTO ACTION',
+      heroTitle: 'Think.<br/>Speak.<br/><span class="gradient-text">Remember.</span>',
+      heroSub: 'Capture your ideas instantly by voice and turn them into organised tasks automatically.',
+      heroDl: 'Download the app',
+      heroHow: 'See how it works',
+      f1Title: 'Fast', f1Desc: 'Speak and create tasks in seconds.',
+      f2Title: 'Smart', f2Desc: 'AI understands your message and organises it for you.',
+      f3Title: 'Private', f3Desc: 'Your data stays yours. Always secure.',
+      f4Title: 'Organised', f4Desc: 'Everything in its place, whenever you need it.',
+      heroAvailable: 'Available for',
+      intLabel: 'Integrates with',
+      howTitle: 'How it works',
+      step1Title: 'Speak', step1Desc: 'Say your idea, task or reminder.',
+      step2Title: 'It gets understood', step2Desc: 'AI transcribes and understands what matters.',
+      step3Title: 'It gets organised', step3Desc: 'It becomes a task and lands in the right list.',
+      step4Title: "It's ready", step4Desc: 'Find it whenever you need it.',
       dlTitle: 'Download Voice2Task',
       apiNote: 'Requires your own <a href="https://console.groq.com/keys" target="_blank">Groq API key</a> (free) · Set it up inside the app',
-      dlBtn: 'Download APK · Android'
+      dlBtn: 'Download APK · Android',
+      faqTitle: 'Frequently asked questions',
+      q1: 'Do I need an internet connection?', a1: 'Yes, transcription and AI analysis happen on the server, so a connection is needed.',
+      q2: 'Do I have to pay for anything?', a2: 'The app is free. You just need your own Groq API key, also free, for the AI to work.',
+      q3: 'Where is my data stored?', a3: 'Your tasks and audio are stored in your own account, accessible only with your username and password.',
+      q5: 'Is my account secure?', a5: "Yes. Your password is stored encrypted and never in plain text, and each session is authenticated with a token only you can use. No one else can see your tasks or voice notes.",
+      q4: 'Is it available for iOS?', a4: 'Right now Voice2Task is only available for Android.',
+      footerPrivacy: 'Privacy', footerTerms: 'Terms'
     }
   };
 
@@ -168,13 +340,6 @@
     for (var i = 0; i < ids.length; i++) {
       var el = document.getElementById(ids[i]);
       if (el) el.innerHTML = d[ids[i]];
-    }
-    var gt = document.querySelector('.gradient-text');
-    if (gt) {
-      gt.style.background = 'linear-gradient(135deg, #7c3aed, #3b82f6)';
-      gt.style.webkitBackgroundClip = 'text';
-      gt.style.webkitTextFillColor = 'transparent';
-      gt.style.backgroundClip = 'text';
     }
   }
 </script>

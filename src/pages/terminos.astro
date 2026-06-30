@@ -1,0 +1,106 @@
+---
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Términos — Voice2Task</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <img src="/favicon.ico" alt="" class="nav-favicon" />
+        <span class="nav-brand">Voice<span class="accent">2</span>Task</span>
+      </div>
+      <div class="nav-center">
+        <a href="/" class="nav-link" id="navHome">Inicio</a>
+      </div>
+      <div class="nav-right">
+        <button class="lang-opt active" id="btnEs" onclick="setLang('es')">ES</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-opt" id="btnEn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </nav>
+  <section class="legal">
+    <div class="container">
+      <h1 id="title">Términos de uso</h1>
+      <p class="legal-updated" id="updated">Última actualización: junio de 2026</p>
+      <p id="intro">Voice2Task es un proyecto personal de portfolio desarrollado por Alejandro Rodríguez. Se ofrece "tal cual", sin garantías, y puede dejar de estar disponible o cambiar en cualquier momento.</p>
+      <h2 id="h1">Uso del servicio</h2>
+      <p id="p1">Para usar la app necesitas tu propia clave de API de Groq. Eres responsable del uso que hagas de tu cuenta y del contenido que generes, y te comprometes a no usar la app con fines ilícitos.</p>
+      <h2 id="h2">Limitación de responsabilidad</h2>
+      <p id="p2">El desarrollador no se hace responsable de pérdidas de datos, interrupciones del servicio, errores en las transcripciones o tareas generadas por la IA, ni de cualquier daño directo o indirecto derivado del uso de la app, en la máxima medida permitida por la ley.</p>
+      <h2 id="h3">Disponibilidad y cambios</h2>
+      <p id="p3">Voice2Task es un proyecto personal de portfolio, no un servicio comercial. El desarrollador no garantiza su disponibilidad continua y puede modificarlo, suspenderlo o eliminarlo en cualquier momento sin previo aviso ni responsabilidad alguna hacia el usuario.</p>
+      <h2 id="h4">Servicios de terceros</h2>
+      <p id="p4">La app utiliza servicios externos (Whisper, Groq) para procesar el audio. El desarrollador no controla ni se responsabiliza del funcionamiento de dichos servicios de terceros.</p>
+      <h2 id="h5">Contacto</h2>
+      <p id="p5">Para cualquier consulta sobre estos términos, puedes contactar con el desarrollador a través de su perfil de GitHub.</p>
+    </div>
+  </section>
+  <footer>
+    <div class="container footer-inner">
+      <p class="footer-copy">© Voice2Task 2026 · Hecho por Alejandro Rodríguez</p>
+      <div class="footer-links">
+        <a href="/privacidad" id="footerPrivacy">Privacidad</a>
+        <a href="/terminos" id="footerTerms">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+<script is:inline>
+  var translations = {
+    es: {
+      navHome: 'Inicio',
+      title: 'Términos de uso',
+      updated: 'Última actualización: junio de 2026',
+      intro: 'Voice2Task es un proyecto personal de portfolio desarrollado por Alejandro Rodríguez. Se ofrece "tal cual", sin garantías, y puede dejar de estar disponible o cambiar en cualquier momento.',
+      h1: 'Uso del servicio',
+      p1: 'Para usar la app necesitas tu propia clave de API de Groq. Eres responsable del uso que hagas de tu cuenta y del contenido que generes, y te comprometes a no usar la app con fines ilícitos.',
+      h2: 'Limitación de responsabilidad',
+      p2: 'El desarrollador no se hace responsable de pérdidas de datos, interrupciones del servicio, errores en las transcripciones o tareas generadas por la IA, ni de cualquier daño directo o indirecto derivado del uso de la app, en la máxima medida permitida por la ley.',
+      h3: 'Disponibilidad y cambios',
+      p3: 'Voice2Task es un proyecto personal de portfolio, no un servicio comercial. El desarrollador no garantiza su disponibilidad continua y puede modificarlo, suspenderlo o eliminarlo en cualquier momento sin previo aviso ni responsabilidad alguna hacia el usuario.',
+      h4: 'Servicios de terceros',
+      p4: 'La app utiliza servicios externos (Whisper, Groq) para procesar el audio. El desarrollador no controla ni se responsabiliza del funcionamiento de dichos servicios de terceros.',
+      h5: 'Contacto',
+      p5: 'Para cualquier consulta sobre estos términos, puedes contactar con el desarrollador a través de su perfil de GitHub.',
+      footerPrivacy: 'Privacidad', footerTerms: 'Términos'
+    },
+    en: {
+      navHome: 'Home',
+      title: 'Terms of use',
+      updated: 'Last updated: June 2026',
+      intro: 'Voice2Task is a personal portfolio project developed by Alejandro Rodríguez. It is provided "as is", without warranties, and may stop being available or change at any time.',
+      h1: 'Using the service',
+      p1: 'To use the app you need your own Groq API key. You are responsible for how you use your account and the content you generate, and agree not to use the app for unlawful purposes.',
+      h2: 'Limitation of liability',
+      p2: 'The developer is not responsible for data loss, service interruptions, errors in AI-generated transcriptions or tasks, or any direct or indirect damage arising from use of the app, to the maximum extent permitted by law.',
+      h3: 'Availability and changes',
+      p3: 'Voice2Task is a personal portfolio project, not a commercial service. The developer does not guarantee continuous availability and may modify, suspend, or discontinue it at any time without notice or liability to the user.',
+      h4: 'Third-party services',
+      p4: 'The app uses external services (Whisper, Groq) to process audio. The developer does not control and is not responsible for the operation of these third-party services.',
+      h5: 'Contact',
+      p5: 'For any questions about these terms, you can contact the developer through their GitHub profile.',
+      footerPrivacy: 'Privacy', footerTerms: 'Terms'
+    }
+  };
+
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    document.getElementById('btnEs').classList.toggle('active', lang === 'es');
+    document.getElementById('btnEn').classList.toggle('active', lang === 'en');
+    var d = translations[lang];
+    Object.keys(d).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.innerHTML = d[id];
+    });
+  }
+</script>
+</body>
+</html>
