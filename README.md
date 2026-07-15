@@ -141,4 +141,3 @@ La landing está desplegada en Vercel con despliegue automático en cada push a 
 ## 📄 Licencia
 
 Proyecto personal en desarrollo. No licenciado para uso comercial.  
-*Personal project under development. Not licensed for commercial use.*
