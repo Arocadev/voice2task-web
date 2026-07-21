@@ -654,3 +654,16 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+.screenshots { padding: 80px 0; }
+.screenshots h2 { text-align: center; margin-bottom: 56px; font-family: 'Space Grotesk', sans-serif; }
+.screenshots-carousel { display: flex; align-items: center; justify-content: center; gap: 24px; }
+.sc-track { width: 300px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 12px; display: flex; align-items: center; justify-content: center; }
+.sc-slide { display: none; width: 100%; }
+.sc-slide.active { display: flex; justify-content: center; }
+.sc-slide img { width: 100%; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); display: block; }
+.sc-btn { width: 40px; height: 40px; border-radius: 50%; background: rgba(20,184,166,0.15); border: 1px solid rgba(20,184,166,0.4); color: var(--primary-light); cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background 0.2s; }
+.sc-btn:hover { background: rgba(20,184,166,0.3); }
+.sc-dots { display: flex; justify-content: center; gap: 6px; margin-top: 24px; }
+.sc-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: background 0.2s; }
+.sc-dot.active { background: var(--primary-light); }

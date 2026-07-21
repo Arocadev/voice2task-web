@@ -25,6 +25,7 @@
       <div class="nav-center">
         <a href="#caracteristicas" class="nav-link" id="navFeatures">Características</a>
         <a href="#como-funciona" class="nav-link" id="navHow">Cómo funciona</a>
+        <a href="#capturas" class="nav-link" id="navScreenshots">La app</a>
         <a href="#faq" class="nav-link" id="navFaq">Preguntas frecuentes</a>
       </div>
       <div class="nav-right">
@@ -207,6 +208,45 @@
     </div>
   </section>
 
+ <!-- CAPTURAS -->
+  <section class="screenshots" id="capturas">
+    <div class="container">
+      <h2>La app por dentro</h2>
+      <div class="screenshots-carousel">
+        <button class="sc-btn" onclick="scMove(-1)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="sc-track">
+          <div class="sc-slide active"><img src="/screenshots/login.png" alt="Login" /></div>
+          <div class="sc-slide"><img src="/screenshots/registro.png" alt="Registro" /></div>
+          <div class="sc-slide"><img src="/screenshots/listas.png" alt="Mis listas" /></div>
+          <div class="sc-slide"><img src="/screenshots/subtareas.png" alt="Tareas" /></div>
+          <div class="sc-slide"><img src="/screenshots/audio.jpeg" alt="Grabando audio" /></div>
+          <div class="sc-slide"><img src="/screenshots/analizando.jpeg" alt="Analizando voz" /></div>
+          <div class="sc-slide"><img src="/screenshots/calendario.png" alt="Calendario" /></div>
+          <div class="sc-slide"><img src="/screenshots/como-funciona.png" alt="Cómo funciona" /></div>
+          <div class="sc-slide"><img src="/screenshots/integraciones.png" alt="Integraciones" /></div>
+          <div class="sc-slide"><img src="/screenshots/trello-como.png" alt="Trello" /></div>
+        </div>
+        <button class="sc-btn" onclick="scMove(1)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <div class="sc-dots">
+        <span class="sc-dot active" onclick="scGo(0)"></span>
+        <span class="sc-dot" onclick="scGo(1)"></span>
+        <span class="sc-dot" onclick="scGo(2)"></span>
+        <span class="sc-dot" onclick="scGo(3)"></span>
+        <span class="sc-dot" onclick="scGo(4)"></span>
+        <span class="sc-dot" onclick="scGo(5)"></span>
+        <span class="sc-dot" onclick="scGo(6)"></span>
+        <span class="sc-dot" onclick="scGo(7)"></span>
+        <span class="sc-dot" onclick="scGo(8)"></span>
+        <span class="sc-dot" onclick="scGo(9)"></span>
+      </div>
+    </div>
+  </section>
+
   <!-- DESCARGA -->
   <section class="download" id="descarga">
     <div class="container">
@@ -269,6 +309,8 @@
       navFeatures: 'Características',
       navFaq: 'Preguntas frecuentes',
       navDownload: 'Descargar la app',
+      navScreenshots: 'La app',
+      screenshotsTitle: 'La app por dentro',
       eyebrow: 'CONVIERTE TU VOZ EN ACCIÓN',
       heroTitle: 'Piensa.<br/>Habla.<br/><span class="gradient-text">Recuerda.</span>',
       heroSub: 'Captura tus ideas al instante con la voz y conviértelas en tareas organizadas automáticamente.',
@@ -301,6 +343,8 @@
       navFeatures: 'Features',
       navFaq: 'FAQ',
       navDownload: 'Download the app',
+      navScreenshots: 'The app',
+      screenshotsTitle: 'Inside the app',
       eyebrow: 'TURN YOUR VOICE INTO ACTION',
       heroTitle: 'Think.<br/>Speak.<br/><span class="gradient-text">Remember.</span>',
       heroSub: 'Capture your ideas instantly by voice and turn them into organised tasks automatically.',
@@ -329,6 +373,18 @@
       footerPrivacy: 'Privacy', footerTerms: 'Terms'
     }
   };
+
+  var scCurrent = 0;
+  var scSlides = document.querySelectorAll('.sc-slide');
+  var scDotEls = document.querySelectorAll('.sc-dot');
+  function scGo(n) {
+    scSlides[scCurrent].classList.remove('active');
+    scDotEls[scCurrent].classList.remove('active');
+    scCurrent = (n + scSlides.length) % scSlides.length;
+    scSlides[scCurrent].classList.add('active');
+    scDotEls[scCurrent].classList.add('active');
+  }
+  function scMove(dir) { scGo(scCurrent + dir); }
 
   function setLang(newLang) {
     lang = newLang;
