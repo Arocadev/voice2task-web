@@ -1,7 +1,6 @@
 <div align="center">
 
 # Voice2Task — Web
-
 **Landing page de Voice2Task**  
 *Voice2Task landing page*
 
@@ -18,6 +17,22 @@ Landing page pública de **Voice2Task**, la app Android que convierte notas de v
 
 ---
 
+## 📸 Capturas
+
+<div align="center">
+
+| Hero | Cómo funciona |
+|:-:|:-:|
+| ![Hero](public/screenshots/web-hero.png) | ![Cómo funciona](public/screenshots/web-funciona.png) |
+
+| Preguntas frecuentes | Descarga |
+|:-:|:-:|
+| ![FAQ](public/screenshots/web-preguntas.png) | ![Descarga](public/screenshots/web-descarga.png) |
+
+</div>
+
+---
+
 ## ✨ Funcionalidades
 
 ### 🌍 Bilingüe
@@ -31,6 +46,9 @@ Tarjetas con los puntos fuertes de la app: rápido, inteligente, privado y organ
 
 ### ⚙️ Cómo funciona
 Flujo visual de 4 pasos: habla → se entiende → se organiza → lo tienes listo.
+
+### 📱 Capturas de la app
+Carousel interactivo con 10 capturas de pantalla de la app Android.
 
 ### 🔌 Integraciones
 Vista de las herramientas con las que conecta Voice2Task: Trello, Notion y Google Calendar (próximamente).
@@ -80,14 +98,15 @@ voice2task-web/
 ├── public/
 │   ├── favicon.ico
 │   ├── logo.png
-│   └── logo-mark.png
+│   ├── logo-mark.png
+│   └── screenshots/           # Capturas de la app Android
 ├── src/
 │   ├── styles/
-│   │   └── global.css          # Estilos globales (tokens, layout, componentes)
+│   │   └── global.css
 │   └── pages/
-│       ├── index.astro         # Página principal
-│       ├── privacidad.astro    # Política de privacidad (ES/EN)
-│       └── terminos.astro      # Términos de uso (ES/EN)
+│       ├── index.astro
+│       ├── privacidad.astro
+│       └── terminos.astro
 ├── astro.config.mjs
 └── package.json
 ```
@@ -115,7 +134,7 @@ La landing está desplegada en Vercel con despliegue automático en cada push a 
 
 ## 🗺️ Roadmap
 
-- [ ] Capturas de pantalla de la app en la landing
+- [x] Capturas de pantalla de la app en la landing
 - [ ] Vídeo demo embebido
 - [ ] Dominio propio en aroca.dev
 
@@ -140,4 +159,4 @@ La landing está desplegada en Vercel con despliegue automático en cada push a 
 
 ## 📄 Licencia
 
-Proyecto personal en desarrollo. No licenciado para uso comercial.  
+Proyecto personal en desarrollo. No licenciado para uso comercial.
